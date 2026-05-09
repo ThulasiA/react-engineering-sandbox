@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+
 const GitHubUsers = () => {
 	const [query, setQuery] = useState("");
 	const [loading, setLoading] = useState(false);
@@ -13,10 +15,14 @@ const GitHubUsers = () => {
 		if (!debouncedQuery) return;
 		const fetchUsers = async () => {
 			setLoading(true);
-			const response = await axios.get(
-				`https://api.github.com/search/users?q=${debouncedQuery}`
-			);
-			setUsers(response.data.items);
+			try {
+				let response = await fetch(`https://api.github.com/search/users?q=${debouncedQuery}`);
+				let data = await response.json();
+				setUsers(data.items);
+			}
+			catch (err) {
+				console.log(`Error: ${err}`);
+			}
 			setLoading(false);
 		};
 		fetchUsers();
