@@ -20,3 +20,24 @@ export const SLIDES_DATA = [
         text: "You made it, have a nice day and see you next time!",
     },
 ];
+
+export const QUESTIONS = [
+    {
+        id: 1,
+        question: "Which hook is used for state management?",
+        options: ["useEffect", "useState", "useMemo"],
+        answer: "useState",
+    },
+    {
+        id: 2,
+        question: "React is primarily used for building ____.",
+        options: ["Databases", "User Interfaces", "Servers"],
+        answer: "User Interfaces",
+    },
+    {
+        id: 3,
+        question: "Which hook runs after every render by default?",
+        options: ["useEffect", "useRef", "useCallback"],
+        answer: "useEffect",
+    },
+];
