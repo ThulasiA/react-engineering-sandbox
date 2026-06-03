@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function FootballMatchesData() {
+const FootballMatchesData = () => {
     const [selectedYear, setSelectedYear] = useState(null);
     const [listData, setListData] = useState({});
     const [initialRender, setInitialRender] = useState(true);
@@ -61,6 +61,6 @@ function FootballMatchesData() {
             </section>
         </div>
     );
-}
+};
 
 export default FootballMatchesData;

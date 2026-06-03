@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SLIDES_DATA as slides } from './constants';
 
-function Slides() {
+const Slides = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const isFirstSlide = currentIndex === 0;
@@ -58,6 +58,6 @@ function Slides() {
             </div>
         </div>
     );
-}
+};
 
 export default Slides;

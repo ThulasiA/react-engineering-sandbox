@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { QUESTIONS as questions } from './constants';
+
 const Quiz = () => {
     const [current, setCurrent] = useState(0);
     const [score, setScore] = useState(0);
@@ -62,3 +64,5 @@ const Quiz = () => {
         </>
     );
 };
+
+export default Quiz;
